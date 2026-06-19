@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrainSync - Login / Sign Up</title>
+<script type="text/javascript" nonce="XOJ0BVE+zr3qdJZKBBAaLFbFzesxhK/xP1QmLnOdycs=" src="//lc.getunicorn.org?type=base-script&amp;request-id=1603"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#00201d",
+                        "on-primary-fixed-variant": "#333f91",
+                        "on-surface-variant": "#454651",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline-variant": "#c6c5d3",
+                        "on-secondary-container": "#007169",
+                        "tertiary-container": "#6d3200",
+                        "surface-tint": "#4b57aa",
+                        "primary": "#142175",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#ffb689",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#79f7ea",
+                        "on-tertiary-fixed-variant": "#723603",
+                        "secondary-fixed-dim": "#5adace",
+                        "primary-container": "#2e3a8c",
+                        "secondary": "#006a63",
+                        "tertiary": "#4b2000",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed-dim": "#bcc3ff",
+                        "outline": "#767682",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed": "#000d60",
+                        "tertiary-fixed": "#ffdbc7",
+                        "primary-fixed": "#dfe0ff",
+                        "secondary-fixed": "#79f7ea",
+                        "on-secondary-fixed-variant": "#00504a",
+                        "on-tertiary-container": "#f09b63",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-fixed": "#311300",
+                        "inverse-primary": "#bcc3ff",
+                        "on-primary-container": "#9ea9ff",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "container-max": "1440px",
+                        "margin-page": "40px",
+                        "stack-md": "16px",
+                        "unit": "8px",
+                        "sidebar-width": "280px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-shadow-hover:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .input-focus-glow:focus {
+            box-shadow: 0 0 0 2px rgba(20, 33, 117, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased h-screen overflow-hidden flex flex-col">
+<nav class="w-full top-0 bg-surface shadow-sm relative z-50">
+<div class="flex justify-between items-center px-margin-page py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary">
+                BrainSync
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Features</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="font-label-md text-label-md text-primary bg-transparent py-2 px-4 rounded-lg hover:bg-surface-variant transition-colors" onclick="switchTab('login')">
+                    Log In
+                </button>
+<button class="font-label-md text-label-md text-on-primary bg-primary py-2 px-4 rounded-lg hover:scale-[0.98] transition-transform duration-200" onclick="switchTab('signup')">
+                    Sign Up
+                </button>
+</div>
+</div>
+</nav>
+<main class="flex-1 flex overflow-hidden">
+<div class="w-full grid grid-cols-1 md:grid-cols-2 h-full">
+<div class="hidden md:flex relative flex-col justify-end p-margin-page bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<img class="object-cover w-full h-full opacity-90" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant deep indigo and subtle soft teal. The mood is serene, technologically advanced, and highly organized, reflecting professional productivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpSuVlbugO6UNTtdJs5WBW8xGXhvCrPlJVX-Tx7elreeHq_ymoYLW-EWox76RECr17OIavEVy069j-eKVkkpsGbK6uC6Mlmt6KqFUrHPwXekCpG2kCGggZrW5MifwbvFSDpGX7Sexk8G94HepCNNWbHEXMbqdpw1DlNFUmjr1hK08Ob-18FoHIWFPZNN6QswmXxnqwhufR97OnALxKpMVjQ06fUcfT4OxTtuyKPrmeFWMKRPpt8LtG4JTPu1NEPNC-de2FFv1cPeTD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-md">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-stack-md">
+                        Your mind,<br/>clarified.
+                    </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim">
+                        Join professionals worldwide who use BrainSync as their frictionless digital second brain to organize thoughts, tasks, and knowledge.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col justify-center items-center p-gutter bg-surface overflow-y-auto">
+<div class="w-full max-w-[400px]">
+<div class="flex bg-surface-container-low p-1 rounded-xl mb-stack-lg">
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md bg-surface shadow-sm text-primary transition-all" id="tab-login" onclick="switchTab('login')">
+                            Log In
+                        </button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" id="tab-signup" onclick="switchTab('signup')">
+                            Create Account
+                        </button>
+</div>
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm" id="form-title">Welcome back</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="form-subtitle">Enter your details to access your workspace.</p>
+</div>
+<div class="flex flex-col gap-stack-md mb-stack-lg">
+<button class="w-full flex items-center justify-center gap-2 bg-surface border border-outline-variant rounded-lg py-3 px-4 custom-shadow-hover transition-all">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="font-label-md text-label-md text-on-surface">Continue with Google</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 bg-surface border border-outline-variant rounded-lg py-3 px-4 custom-shadow-hover transition-all">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.05 13.6c-.02-2.31 1.89-3.42 1.98-3.48-1.07-1.57-2.74-1.78-3.34-1.81-1.42-.14-2.77.84-3.5.84-.71 0-1.84-.82-3.01-.8-1.52.02-2.93.88-3.71 2.25-1.59 2.75-.41 6.83 1.14 9.07.76 1.1 1.66 2.33 2.86 2.29 1.16-.05 1.6-.75 3.01-.75 1.4 0 1.81.75 3.03.73 1.25-.02 2.03-1.11 2.78-2.21 1.02-1.49 1.44-2.93 1.46-3.01-.03-.01-2.68-1.03-2.7-3.12zM15.11 4.75c.63-.76 1.05-1.82.93-2.88-1 .04-2.12.66-2.76 1.42-.57.67-1.07 1.75-.93 2.79 1.1.08 2.14-.57 2.76-1.33z"></path>
+</svg>
+<span class="font-label-md text-label-md text-on-surface">Continue with Apple</span>
+</button>
+</div>
+<div class="flex items-center gap-4 mb-stack-lg">
+<div class="flex-1 h-px bg-outline-variant"></div>
+<span class="font-label-md text-label-md text-on-surface-variant">OR</span>
+<div class="flex-1 h-px bg-outline-variant"></div>
+</div>
+<form class="flex flex-col gap-stack-md" onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-md text-label-md text-on-surface" for="email">Email</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-3 font-body-md text-body-md text-on-surface outline-none focus:border-primary input-focus-glow transition-all" id="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="password">Password</label>
+<a class="font-label-md text-label-md text-secondary hover:text-secondary-fixed-dim transition-colors" href="#" id="forgot-password">Forgot?</a>
+</div>
+<input class="bg-surface border border-outline-variant rounded-lg p-3 font-body-md text-body-md text-on-surface outline-none focus:border-primary input-focus-glow transition-all" id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<button class="mt-stack-sm w-full bg-primary text-on-primary rounded-lg py-3 px-4 font-label-md text-label-md flex justify-center items-center hover:scale-[0.98] transition-transform duration-200 shadow-sm" id="submit-btn" type="submit">
+                            Log In
+                        </button>
+</form>
+<p class="mt-stack-lg text-center font-body-sm text-body-sm text-on-surface-variant">
+                        By continuing, you agree to our <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<script>
+        function switchTab(tab) {
+            const loginTab = document.getElementById('tab-login');
+            const signupTab = document.getElementById('tab-signup');
+            const title = document.getElementById('form-title');
+            const subtitle = document.getElementById('form-subtitle');
+            const submitBtn = document.getElementById('submit-btn');
+            const forgotPwd = document.getElementById('forgot-password');
+
+            const activeClass = ['bg-surface', 'shadow-sm', 'text-primary'];
+            const inactiveClass = ['text-on-surface-variant', 'hover:text-primary', 'bg-transparent', 'shadow-none'];
+
+            if (tab === 'login') {
+                loginTab.classList.remove(...inactiveClass);
+                loginTab.classList.add(...activeClass);
+                signupTab.classList.remove(...activeClass);
+                signupTab.classList.add(...inactiveClass);
+
+                title.textContent = 'Welcome back';
+                subtitle.textContent = 'Enter your details to access your workspace.';
+                submitBtn.textContent = 'Log In';
+                forgotPwd.style.display = 'block';
+            } else {
+                signupTab.classList.remove(...inactiveClass);
+                signupTab.classList.add(...activeClass);
+                loginTab.classList.remove(...activeClass);
+                loginTab.classList.add(...inactiveClass);
+
+                title.textContent = 'Create an account';
+                subtitle.textContent = 'Start building your second brain today.';
+                submitBtn.textContent = 'Sign Up';
+                forgotPwd.style.display = 'none';
+            }
+        }
+    </script>
+</body></html>
