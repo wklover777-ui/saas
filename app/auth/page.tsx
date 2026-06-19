@@ -17,10 +17,10 @@ export default function AuthPage() {
           </div>
           <div className="relative z-10 max-w-md">
             <h1 className="font-display-lg text-display-lg text-on-primary mb-stack-md">
-              Your mind,<br/>clarified.
+              생각을 정리하고,<br/>명확하게.
             </h1>
             <p className="font-body-lg text-body-lg text-primary-fixed-dim">
-              Join professionals worldwide who use BrainSync as their frictionless digital second brain to organize thoughts, tasks, and knowledge.
+              생각, 작업, 지식을 정리하기 위해 BrainSync를 디지털 두 번째 뇌로 사용하는 전 세계 전문가들과 함께하세요.
             </p>
           </div>
         </div>

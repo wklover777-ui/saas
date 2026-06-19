@@ -12,22 +12,22 @@ export default function LandingPage() {
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-fixed-dim/40 via-surface to-background"></div>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/20 font-label-md text-label-md mb-stack-lg">
             <span className="material-symbols-outlined text-[16px]">bolt</span>
-            Introducing Smart Tags 2.0
+            스마트 태그 2.0 출시
           </span>
           <h1 className="font-display-lg text-display-lg text-on-surface max-w-4xl mb-stack-md tracking-tight">
-            Sync Your Thoughts,<br/> <span className="text-primary">Simplify Your Life.</span>
+            생각을 동기화하고,<br/> <span className="text-primary">삶을 단순하게.</span>
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
-            The minimalist, high-performance digital workspace designed for professionals. Capture ideas, organize instantly, and access your second brain from anywhere.
+            전문가를 위해 설계된 미니멀하고 고성능의 디지털 작업 공간입니다. 아이디어를 기록하고, 즉시 정리하며, 어디서든 두 번째 뇌에 접근하세요.
           </p>
           <div className="flex flex-col sm:flex-row gap-stack-md justify-center items-center">
             <Link href="/auth" className="bg-primary text-on-primary hover:scale-[0.95] transition-transform duration-200 px-8 py-4 rounded-xl shadow-[0_4px_14px_0_rgba(20,33,117,0.39)] font-label-md text-label-md flex items-center gap-2">
-              Start Free Trial
+              무료 체험 시작하기
               <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
             <button className="bg-surface text-on-surface-variant border border-outline-variant hover:bg-surface-variant transition-colors px-8 py-4 rounded-xl font-label-md text-label-md flex items-center gap-2">
               <span className="material-symbols-outlined">play_circle</span>
-              Watch Demo
+              데모 영상 보기
             </button>
           </div>
           <div className="mt-24 w-full max-w-5xl rounded-xl shadow-2xl border border-surface-container-highest overflow-hidden relative">
@@ -44,30 +44,30 @@ export default function LandingPage() {
         <section className="py-24 px-margin-page bg-surface-container-lowest w-full" id="features">
           <div className="max-w-container-max mx-auto">
             <div className="text-center mb-16">
-              <h2 className="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Engineered for Focus</h2>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Everything you need to build your personal knowledge base, without the visual clutter.</p>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">집중을 위한 설계</h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">시각적인 방해 없이 나만의 지식 베이스를 구축하는 데 필요한 모든 것.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               <div className="bg-surface p-8 rounded-xl border border-surface-container-high hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-stack-lg text-on-primary-fixed group-hover:bg-primary group-hover:text-on-primary transition-colors">
                   <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>sync</span>
                 </div>
-                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">Instant Sync</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">Your notes flow seamlessly across all your devices in real-time. Start on your phone, finish on your desktop without missing a beat.</p>
+                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">실시간 동기화</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">모든 기기에서 실시간으로 끊김 없이 노트가 동기화됩니다. 휴대폰에서 시작해서 데스크탑에서 바로 이어서 작업하세요.</p>
               </div>
               <div className="bg-surface p-8 rounded-xl border border-surface-container-high hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center mb-stack-lg text-on-secondary-fixed group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
                   <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>edit_document</span>
                 </div>
-                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">Rich Text Editor</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">A distraction-free canvas supporting markdown, code blocks, embedded media, and fluid typography that feels like writing on air.</p>
+                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">리치 텍스트 에디터</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">마크다운, 코드 블록, 미디어 삽입, 유려한 타이포그래피를 지원하여 마치 허공에 글을 쓰는 듯한 몰입형 캔버스를 제공합니다.</p>
               </div>
               <div className="bg-surface p-8 rounded-xl border border-surface-container-high hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center mb-stack-lg text-on-primary-container group-hover:bg-primary group-hover:text-on-primary transition-colors">
                   <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>cloud_done</span>
                 </div>
-                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">Secure Cloud Storage</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">Enterprise-grade encryption ensures your private thoughts remain strictly yours. Backed by reliable, redundant global servers.</p>
+                <h3 className="font-headline-md text-headline-md text-on-surface mb-stack-sm">안전한 클라우드 스토리지</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">엔터프라이즈급 암호화로 당신의 사적인 생각들을 안전하게 보호합니다. 신뢰할 수 있는 글로벌 서버에 안전하게 보관됩니다.</p>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function LandingPage() {
         <section className="py-24 px-margin-page bg-surface-container-low relative overflow-hidden">
           <div className="absolute right-0 top-0 w-1/3 h-full bg-secondary-container/20 blur-[100px] -z-10 rounded-full"></div>
           <div className="max-w-container-max mx-auto">
-            <h2 className="font-headline-lg text-headline-lg text-center text-on-surface mb-16">Trusted by Professionals</h2>
+            <h2 className="font-headline-lg text-headline-lg text-center text-on-surface mb-16">전문가들이 신뢰하는 솔루션</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
               <div className="glass-panel p-8 rounded-xl shadow-sm">
                 <div className="flex gap-1 mb-4 text-tertiary-container">
