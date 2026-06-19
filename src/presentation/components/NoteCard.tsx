@@ -27,7 +27,7 @@ export function NoteCard({ id, title, content, updatedAt, isFavorite }: NoteCard
         </div>
         <h4 className="text-headline-md font-headline-md text-on-surface mb-stack-sm line-clamp-2 group-hover:text-primary transition-colors">{title}</h4>
         <p className="text-body-sm font-body-sm text-on-surface-variant line-clamp-3 mb-stack-md flex-1">
-          {content || 'Empty note'}
+          {content || '내용이 없습니다.'}
         </p>
       </article>
     </Link>

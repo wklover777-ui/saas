@@ -39,22 +39,22 @@ export default function AuthForm() {
           className={`flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all ${isLogin ? activeTabClass : inactiveTabClass}`}
           onClick={() => { setIsLogin(true); setError(null); }}
         >
-          Log In
+          로그인
         </button>
         <button 
           className={`flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all ${!isLogin ? activeTabClass : inactiveTabClass}`}
           onClick={() => { setIsLogin(false); setError(null); }}
         >
-          Create Account
+          회원가입
         </button>
       </div>
 
       <div className="text-center mb-stack-lg">
         <h2 className="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">
-          {isLogin ? 'Welcome back' : 'Create an account'}
+          {isLogin ? '환영합니다' : '계정 만들기'}
         </h2>
         <p className="font-body-sm text-body-sm text-on-surface-variant">
-          {isLogin ? 'Enter your details to access your workspace.' : 'Start building your second brain today.'}
+          {isLogin ? '계정 정보를 입력해 로그인해 주세요.' : '나만의 두 번째 뇌, 지금 바로 시작하세요.'}
         </p>
       </div>
 
@@ -72,19 +72,19 @@ export default function AuthForm() {
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
             <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
           </svg>
-          <span className="font-label-md text-label-md text-on-surface">Continue with Google</span>
+          <span className="font-label-md text-label-md text-on-surface">Google 계정으로 계속하기</span>
         </button>
       </div>
 
       <div className="flex items-center gap-4 mb-stack-lg">
         <div className="flex-1 h-px bg-outline-variant"></div>
-        <span className="font-label-md text-label-md text-on-surface-variant">OR</span>
+        <span className="font-label-md text-label-md text-on-surface-variant">또는</span>
         <div className="flex-1 h-px bg-outline-variant"></div>
       </div>
 
       <form className="flex flex-col gap-stack-md" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-stack-sm">
-          <label className="font-label-md text-label-md text-on-surface" htmlFor="email">Email</label>
+          <label className="font-label-md text-label-md text-on-surface" htmlFor="email">이메일</label>
           <input 
             name="email"
             className="bg-surface border border-outline-variant rounded-lg p-3 font-body-md text-body-md text-on-surface outline-none focus:border-primary input-focus-glow transition-all" 
@@ -97,8 +97,8 @@ export default function AuthForm() {
         
         <div className="flex flex-col gap-stack-sm">
           <div className="flex justify-between items-center">
-            <label className="font-label-md text-label-md text-on-surface" htmlFor="password">Password</label>
-            {isLogin && <a className="font-label-md text-label-md text-secondary hover:text-secondary-fixed-dim transition-colors" href="#">Forgot?</a>}
+            <label className="font-label-md text-label-md text-on-surface" htmlFor="password">비밀번호</label>
+            {isLogin && <a className="font-label-md text-label-md text-secondary hover:text-secondary-fixed-dim transition-colors" href="#">비밀번호 찾기</a>}
           </div>
           <input 
             name="password"
@@ -115,12 +115,12 @@ export default function AuthForm() {
           className="mt-stack-sm w-full bg-primary text-on-primary rounded-lg py-3 px-4 font-label-md text-label-md flex justify-center items-center hover:scale-[0.98] transition-transform duration-200 shadow-sm disabled:opacity-50" 
           type="submit"
         >
-          {isLoading ? 'Processing...' : (isLogin ? 'Log In' : 'Sign Up')}
+          {isLoading ? '처리 중...' : (isLogin ? '로그인' : '회원가입')}
         </button>
       </form>
 
       <p className="mt-stack-lg text-center font-body-sm text-body-sm text-on-surface-variant">
-        By continuing, you agree to our <a className="text-primary hover:underline" href="#">Terms of Service</a> and <a className="text-primary hover:underline" href="#">Privacy Policy</a>.
+        계속 진행하시면 당사의 <a className="text-primary hover:underline" href="#">이용약관</a> 및 <a className="text-primary hover:underline" href="#">개인정보처리방침</a>에 동의하는 것으로 간주됩니다.
       </p>
     </div>
   );

@@ -14,7 +14,7 @@ export async function DashboardHeader() {
     <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-md pt-stack-md">
       <div className="relative w-full md:max-w-md group">
         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors">search</span>
-        <input className="w-full bg-surface-container-lowest border border-outline-variant rounded-xl py-2 pl-10 pr-4 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all shadow-sm" placeholder="Search your second brain..." type="text"/>
+        <input className="w-full bg-surface-container-lowest border border-outline-variant rounded-xl py-2 pl-10 pr-4 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all shadow-sm" placeholder="노트 검색하기..." type="text"/>
       </div>
       <div className="flex items-center gap-stack-md">
         <button className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors relative border border-transparent hover:border-outline-variant">
@@ -28,7 +28,7 @@ export async function DashboardHeader() {
           <span className="text-body-sm font-body-sm text-on-surface-variant hidden md:inline-block max-w-[150px] truncate">{user.email}</span>
           <form action={logoutAction} className="ml-2">
             <button type="submit" className="text-label-md font-label-md text-error hover:text-error hover:bg-error-container/50 px-3 py-1.5 rounded-lg border border-error/30 transition-colors">
-              Logout
+              로그아웃
             </button>
           </form>
         </div>

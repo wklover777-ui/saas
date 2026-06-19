@@ -30,12 +30,12 @@ export default async function NotesPage() {
     <div className="max-w-container-max mx-auto w-full px-margin-page pb-stack-lg flex flex-col gap-stack-lg min-h-screen pt-stack-md">
       <section className="flex flex-col gap-stack-md">
         <div className="flex justify-between items-end border-b border-outline-variant pb-stack-sm">
-          <h1 className="text-display-md font-display-md text-on-surface">All Notes</h1>
+          <h1 className="text-display-md font-display-md text-on-surface">모든 노트</h1>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-stack-sm">
           {notes.length === 0 ? (
-            <div className="col-span-full text-center py-10 text-on-surface-variant">No notes found. Create your first note!</div>
+            <div className="col-span-full text-center py-10 text-on-surface-variant">작성된 노트가 없습니다. 첫 번째 노트를 작성해 보세요!</div>
           ) : (
             notes.map((note) => (
               <NoteCard

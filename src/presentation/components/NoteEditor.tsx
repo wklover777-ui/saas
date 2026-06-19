@@ -37,16 +37,16 @@ export function NoteEditor({ initialNote }: { initialNote: Note }) {
           <div className="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md">
             <span className="flex items-center gap-1 text-outline">
               <span className="material-symbols-outlined text-[18px]">folder_open</span>
-              {initialNote.categoryId ? 'Category' : 'Uncategorized'}
+              {initialNote.categoryId ? '카테고리' : '미분류'}
             </span>
             <span className="text-outline-variant">•</span>
-            <span className="text-outline">{isSaving ? 'Saving...' : 'Saved'}</span>
+            <span className="text-outline">{isSaving ? '저장 중...' : '저장됨'}</span>
           </div>
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setDfMode(!dfMode)}
               className={`p-2 rounded-lg transition-colors flex items-center justify-center tooltip-trigger ${dfMode ? 'bg-primary-container text-on-primary-container' : 'text-on-surface-variant hover:bg-surface-container hover:text-primary'}`} 
-              title="Distraction Free Mode"
+              title="집중 모드"
             >
               <span className="material-symbols-outlined" style={{ fontVariationSettings: dfMode ? "'FILL' 1" : "'FILL' 0" }}>
                 {dfMode ? 'fullscreen_exit' : 'fullscreen'}
@@ -54,11 +54,11 @@ export function NoteEditor({ initialNote }: { initialNote: Note }) {
             </button>
             <button className="px-4 py-2 text-secondary border border-secondary rounded-lg font-label-md text-label-md hover:bg-secondary/5 transition-colors active:scale-98 flex items-center gap-2">
               <span className="material-symbols-outlined text-[18px]">share</span>
-              Share
+              공유
             </button>
             <button onClick={handleSave} className="px-5 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors active:scale-98 flex items-center gap-2">
               <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>save</span>
-              Save
+              저장
             </button>
           </div>
         </div>
@@ -69,7 +69,7 @@ export function NoteEditor({ initialNote }: { initialNote: Note }) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             className="ghost-input font-display-lg text-display-lg text-on-surface bg-transparent border-none outline-none placeholder:text-outline-variant w-full mb-stack-md" 
-            placeholder="Untitled Note" 
+            placeholder="제목 없는 노트" 
             type="text" 
           />
 
@@ -90,7 +90,7 @@ export function NoteEditor({ initialNote }: { initialNote: Note }) {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="ghost-input font-body-lg text-body-lg text-on-surface leading-relaxed min-h-[500px] w-full bg-transparent border-none outline-none resize-none" 
-            placeholder="Start typing to continue..."
+            placeholder="내용을 입력하세요..."
           />
         </article>
       </main>
@@ -99,40 +99,40 @@ export function NoteEditor({ initialNote }: { initialNote: Note }) {
       <aside className="w-[300px] border-l border-outline-variant bg-surface-container-lowest h-full overflow-y-auto shrink-0 sidebar-transition flex flex-col" id="right-sidebar">
         <div className="p-6 border-b border-outline-variant flex items-center gap-3">
           <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
-          <h3 className="font-headline-md text-[18px] font-semibold text-on-surface">Note Details</h3>
+          <h3 className="font-headline-md text-[18px] font-semibold text-on-surface">노트 상세 정보</h3>
         </div>
         <div className="p-6 flex flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <label className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Status</label>
+            <label className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">상태</label>
             <div className="flex items-center gap-2 mt-1">
               <div className="w-2 h-2 rounded-full bg-secondary"></div>
-              <span className="font-body-sm text-body-sm text-on-surface">Draft in Progress</span>
+              <span className="font-body-sm text-body-sm text-on-surface">작성 중</span>
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Category</label>
+            <label className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">카테고리</label>
             <div className="relative mt-1">
               <select className="w-full appearance-none bg-surface border border-outline-variant rounded-lg py-2 pl-3 pr-10 font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-shadow cursor-pointer">
-                <option>Research</option>
-                <option>Meetings</option>
-                <option>Personal Ideas</option>
-                <option>Journal</option>
+                <option>리서치</option>
+                <option>회의</option>
+                <option>개인 아이디어</option>
+                <option>일기</option>
               </select>
               <span className="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-[20px]">expand_more</span>
             </div>
           </div>
           <div className="flex flex-col gap-3 pt-6 border-t border-outline-variant">
             <div className="flex justify-between items-center font-body-sm text-[13px]">
-              <span className="text-outline text-body-sm">Created</span>
+              <span className="text-outline text-body-sm">작성일</span>
               <span className="text-on-surface font-medium">{new Date(initialNote.createdAt).toLocaleDateString()}</span>
             </div>
             <div className="flex justify-between items-center font-body-sm text-[13px]">
-              <span className="text-outline text-body-sm">Last Modified</span>
+              <span className="text-outline text-body-sm">최근 수정일</span>
               <span className="text-on-surface font-medium">{new Date(initialNote.updatedAt).toLocaleDateString()}</span>
             </div>
             <div className="flex justify-between items-center font-body-sm text-[13px]">
-              <span className="text-outline text-body-sm">Word Count</span>
-              <span className="text-on-surface font-medium">{content.split(/\s+/).filter(Boolean).length} words</span>
+              <span className="text-outline text-body-sm">단어 수</span>
+              <span className="text-on-surface font-medium">{content.split(/\s+/).filter(Boolean).length} 단어</span>
             </div>
           </div>
         </div>

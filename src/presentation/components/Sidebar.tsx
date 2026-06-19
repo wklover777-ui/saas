@@ -17,7 +17,7 @@ export function Sidebar() {
       <form action={createNewNote}>
         <button type="submit" className="w-full bg-primary text-on-primary py-stack-sm rounded-xl font-label-md text-label-md mb-stack-lg hover:scale-[0.98] transition-transform duration-200 shadow-[0_4px_6px_-1px_rgba(20,33,117,0.1)] flex items-center justify-center gap-stack-sm">
           <span className="material-symbols-outlined">add</span>
-          New Note
+          새 노트 작성
         </button>
       </form>
 
@@ -25,25 +25,25 @@ export function Sidebar() {
         <li>
           <Link href="/notes" className="bg-primary-fixed text-on-primary-fixed font-bold rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm scale-95 transition-all shadow-sm">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>description</span>
-            <span className="font-label-md text-label-md">All Notes</span>
+            <span className="font-label-md text-label-md">모든 노트</span>
           </Link>
         </li>
         <li>
           <a href="#" className="text-on-surface-variant hover:bg-surface-variant rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group">
             <span className="material-symbols-outlined group-hover:text-primary transition-colors">star</span>
-            <span className="font-label-md text-label-md">Favorites</span>
+            <span className="font-label-md text-label-md">즐겨찾기</span>
           </a>
         </li>
         <li>
           <a href="#" className="text-on-surface-variant hover:bg-surface-variant rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group">
             <span className="material-symbols-outlined group-hover:text-primary transition-colors">folder</span>
-            <span className="font-label-md text-label-md">Categories</span>
+            <span className="font-label-md text-label-md">카테고리</span>
           </a>
         </li>
         <li>
           <a href="#" className="text-on-surface-variant hover:bg-surface-variant rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group">
             <span className="material-symbols-outlined group-hover:text-primary transition-colors">archive</span>
-            <span className="font-label-md text-label-md">Archive</span>
+            <span className="font-label-md text-label-md">보관함</span>
           </a>
         </li>
       </ul>
@@ -52,19 +52,19 @@ export function Sidebar() {
         <li>
           <Link href="/payment" className="bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group shadow-sm mb-2">
             <span className="material-symbols-outlined text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
-            <span className="font-label-md text-label-md font-bold">Upgrade to Pro</span>
+            <span className="font-label-md text-label-md font-bold">Pro로 업그레이드</span>
           </Link>
         </li>
         <li>
           <a href="#" className="text-on-surface-variant hover:bg-surface-variant rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group">
             <span className="material-symbols-outlined group-hover:text-primary transition-colors">settings</span>
-            <span className="font-label-md text-label-md">Settings</span>
+            <span className="font-label-md text-label-md">설정</span>
           </a>
         </li>
         <li>
           <a href="#" className="text-on-surface-variant hover:bg-surface-variant rounded-xl flex items-center gap-stack-md px-stack-md py-stack-sm transition-colors group">
             <span className="material-symbols-outlined group-hover:text-primary transition-colors">help</span>
-            <span className="font-label-md text-label-md">Support</span>
+            <span className="font-label-md text-label-md">고객 지원</span>
           </a>
         </li>
       </ul>

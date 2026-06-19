@@ -9,16 +9,16 @@ export function GlobalHeader() {
           Second Brain
         </Link>
         <div className="hidden md:flex items-center gap-gutter">
-          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#features">Features</Link>
-          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#pricing">Pricing</Link>
-          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#about">About</Link>
+          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#features">주요 기능</Link>
+          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#pricing">요금제</Link>
+          <Link className="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="/#about">소개</Link>
         </div>
         <div className="flex items-center gap-stack-md">
           <Link href="/auth" className="hidden sm:block text-primary dark:text-primary-fixed hover:bg-surface-variant px-4 py-2 rounded-xl transition-colors font-label-md text-label-md">
-            Log In
+            로그인
           </Link>
           <Link href="/auth" className="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-xl hover:scale-[0.98] transition-transform duration-200 shadow-sm font-label-md text-label-md">
-            Sign Up
+            회원가입
           </Link>
         </div>
       </div>

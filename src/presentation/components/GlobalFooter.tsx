@@ -9,12 +9,12 @@ export function GlobalFooter() {
           Second Brain
         </div>
         <div className="flex gap-stack-lg">
-          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</Link>
-          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</Link>
-          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Contact</Link>
+          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">개인정보처리방침</Link>
+          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">이용약관</Link>
+          <Link className="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#">문의하기</Link>
         </div>
         <p className="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface opacity-80">
-          © 2024 Second Brain Inc. All rights reserved.
+          © 2024 Second Brain Inc. 모든 권리 보유.
         </p>
       </div>
     </footer>
