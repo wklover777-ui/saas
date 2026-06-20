@@ -10,6 +10,28 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BrainSync - Cloud Note Service",
   description: "Sync Your Thoughts, Simplify Your Life.",
+  openGraph: {
+    title: "BrainSync - Cloud Note Service",
+    description: "Sync Your Thoughts, Simplify Your Life.",
+    url: "https://www.brainsync.com", // TODO: 실제 서비스 도메인으로 변경해주세요
+    siteName: "BrainSync",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "BrainSync - Cloud Note Service",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BrainSync - Cloud Note Service",
+    description: "Sync Your Thoughts, Simplify Your Life.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
