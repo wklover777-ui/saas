@@ -8,9 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://saas-three-blush.vercel.app"),
   title: "BrainSync - Cloud Note Service",
   description: "Sync Your Thoughts, Simplify Your Life.",
   openGraph: {
+
     title: "BrainSync - Cloud Note Service",
     description: "Sync Your Thoughts, Simplify Your Life.",
     url: "https://www.brainsync.com", // TODO: 실제 서비스 도메인으로 변경해주세요
